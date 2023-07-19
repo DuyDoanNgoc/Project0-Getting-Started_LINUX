@@ -86,13 +86,18 @@ In your README, report the Compute Capability of your CUDA-compatible GPU (somet
    * If you have switchable graphics (NVIDIA Optimus), you may need to force your program to run with only the NVIDIA card. In NVIDIA Control Panel, under "Manage 3D Settings," set "Multi-display/Mixed GPU acceleration" to "Single display performance mode".
 
 #### Linux
+**prerequites:** 
+   1. Create a directory called eclipse under Project0-Getting-Started. eclipse should be a sibling directory to cuda-getting-started. (The name eclipse itself is not important, but that's the example I'm going to use)
+   2. CD into the eclipse directory, then run the command
+      `cmake ../cuda-getting-started -G "Eclipse CDT4 - Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug`
+      * Note: Change Debug to Release when running the profiler.
 
 It is recommended that you use Nsight. Nsight is shipped with CUDA. If you set up the environment path correctly `export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}` (Note that simply typing the `export` command is a temporary change. The `PATH` variable won't be updated permanently. For permanent change, add it to your shell configuration file, e.g. `~/.profile` on Ubuntu), you can run Nsight by typing `nsight` in your terminal.
 
 1. Open Nsight. Set the workspace to the one *containing* your cloned repo.
 2. *File->Import...->General->Existing Projects Into Workspace*.
-   * Select the `cuda-getting-started` directory as the *root directory*.
-3. Select the *cis565-* project in the Project Explorer. Right click the project. Select *Build Project*.
+   * Select the `eclipse` directory as the *root directory*.
+3. Select the *cis565_getting_started.....* project in the Project Explorer. Right click the project. Select *Build Project*.
    * For later use, note that you can select various Debug and Release build configurations under *Project->Build Configurations->Set Active...*.
 4. If you see an error like `CUDA_SDK_ROOT_DIR-NOTFOUND`:
    * In a terminal, navigate to the build directory, then run: `cmake-gui ..`
