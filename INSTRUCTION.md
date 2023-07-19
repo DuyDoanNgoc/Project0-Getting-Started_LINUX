@@ -86,7 +86,7 @@ In your README, report the Compute Capability of your CUDA-compatible GPU (somet
    * If you have switchable graphics (NVIDIA Optimus), you may need to force your program to run with only the NVIDIA card. In NVIDIA Control Panel, under "Manage 3D Settings," set "Multi-display/Mixed GPU acceleration" to "Single display performance mode".
 
 #### Linux
-**prerequites:** 
+**Prerequisites:** 
    1. Create a directory called eclipse under Project0-Getting-Started. eclipse should be a sibling directory to cuda-getting-started. (The name eclipse itself is not important, but that's the example I'm going to use)
    2. CD into the eclipse directory, then run the command
       `cmake ../cuda-getting-started -G "Eclipse CDT4 - Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug`
